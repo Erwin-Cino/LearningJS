@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator Usng Objects And Methods</title>
+  </head>
+  <body>
+  	<h1 id='post-winner'></h1>
+  </body>
+
+  <script type="text/javascript">
+
+  	var john = {
+  		fullName: 'John Jakulero',
+  		height: 1.5,
+  		mass: 55,
+		johnBmi: function () {
+  			this.bmi = this.mass * (Math.pow(this.height,2));
+  		}
+  	}
+
+  	var mark = {
+		fullName: 'Mark Random',
+		height: 1.8,
+		mass: 68,
+		markBmi: function () {
+	  		this.bmi = this.mass * (Math.pow(this.height,2));
+	  	}
+    }
+
+    var heighestBmi = null;
+
+    mark.markBmi();
+    john.johnBmi();	
+    console.log(john.bmi);
+    console.log(mark.bmi);
+
+    if (john.bmi > mark.bmi) {
+    	heighestBmi = john.fullName + " has the higher BMI " + "against " + mark.fullName + " with a BMI of " + john.bmi;
+    } else if (john.bmi < mark.bmi)	{
+    	heighestBmi = mark.fullName + " has the higher BMI " + "against " + john.fullName + " with a BMI of " + mark.bmi ;
+    }
+
+    document.getElementById('post-winner').innerHTML = heighestBmi;
+
+
+
+  </script>
+</html>

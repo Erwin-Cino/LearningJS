@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+  <h1 id="display_report"></h1>
+  </body>
+
+  <script type="text/javascript">
+  	
+		var mark_w = 60;
+		var mark_h = 2.4;
+		var john_h = 3.00;
+		var john_w = 55;
+
+		var bmi_mark = (mark_w) / (mark_h * mark_h);
+		console.log(bmi_mark);
+
+		var bmi_john = (john_w) / (john_h * john_h);
+		console.log(bmi_john);
+
+		if (bmi_mark > bmi_john) {
+			var bmi_report = "Mark has a greater BMI than John";
+		} else if (bmi_john > bmi_mark) {
+			var bmi_report = "Johnhas a greater BMI than Mark";
+		} else {
+			var bmi_report = "Both BMI's are equal";
+		}
+
+		document.getElementById("display_report").innerHTML = bmi_report;
+
+
+  </script>
+</html>
+
+

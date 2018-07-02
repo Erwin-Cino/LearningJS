@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculate Who Won By Average</title>
+  </head>
+  <body>
+  <h1 id="display_report"></h1>
+  <h1 id="display_report_m"></h1>
+  <h1 id="display_report_winner"></h1>
+  </body>
+
+  <script type="text/javascript">
+
+  	var team_john = [89,120,103];
+  	var team_mike = [116,94,123];
+  	//console.log(team_mike);
+  	var average_j = 0;
+  	var sum_j = 0;
+  	var average_m = 0;
+  	var sum_m = 0;
+  	var teamJohn = "team John!";
+  	var teamMike = "team Mike!";
+
+  	for(var i = 0; i < team_john.length; i++) {
+  		sum_j += (parseInt(team_john[i]));
+  		average_j = sum_j / team_john.length;
+  	}
+
+  	for(var i = 0; i < team_mike.length; i++) {
+  		sum_m += (parseInt(team_mike[i]));
+  		average_m = sum_m / team_mike.length;
+  	}
+
+
+  	document.getElementById("display_report").innerHTML = average_j;
+  	document.getElementById("display_report_m").innerHTML = average_m;
+  	var winner = null;
+
+  	// document.getElementById("display_report_winner").innerHTML = "The winner is " + teamjohn ;
+
+  	if(average_j > average_m) {
+  		var winner = document.getElementById("display_report_winner").innerHTML = "The winner is " + teamJohn ;
+
+  	} else if (average_m > average_j) {
+  		var winner = document.getElementById("display_report_winner").innerHTML = "The winner is " + teamMike ;
+  	} else {
+  		var winner = document.getElementById("display_report_winner").innerHTML = "It is a draw by average";
+  	}
+
+  </script>
+</html>

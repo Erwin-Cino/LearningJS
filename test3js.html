@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tips and Bills</title>
+
+  </head>
+  <body>
+    <div>
+      <p id="tips"></p>
+    </div>
+    <div>
+      <p id="total"></p>
+    </div>
+
+
+  </body>
+
+  <script type="text/javascript">
+
+    var tip = [];
+    var total = [];
+    var bills = [124, 48, 268];
+
+    for(i = 0; i < bills.length; i++) {
+
+      if(bills[i] < 50) {
+        tip.push(bills[i] * .20);
+        total.push(bills[i] + tip[i])
+      } else if(bills[i] > 50 && bills[i] < 200) {
+        tip.push(bills[i] * .15);
+        total.push(bills[i] + tip[i])
+      } else if(bills[i] > 200) {
+        tip.push(bills[i] * .10);
+        total.push(bills[i] + tip[i])
+      }
+      
+
+    }
+console.log(tip);
+console.log(total);
+document.getElementById('tips').innerHTML = tip;
+document.getElementById('total').innerHTML = total;
+
+
+  </script>
+</html>
