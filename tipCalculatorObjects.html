@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tips and Bills</title>
+
+  </head>
+  <body>
+  </body>
+   <script type="text/javascript">
+  
+   	var i = 0;
+   	var tips = {
+   		bills: [124,48,268,180,42],
+   		tip: [],
+   		total: [],
+   		tipCalc: function() {
+   			for (i = 0; i < this.bills.length; i++) {
+	   			if(this.bills[i] < 50) {
+		        this.tip.push(this.bills[i] * .20);
+		        this.total.push(this.bills[i] + this.tip[i])
+		      } else if (this.bills[i] > 50 && bills[i] < 200) {
+		        this.tip.push (this.bills[i] * .15);
+		        this.total.push (this.bills[i] + this.tip[i])
+		      } else if (this.bills[i] > 200) {
+		        this.tip.push(this.bills[i] * .10);
+		        this.total.push(this.bills[i] + this.tip[i])
+		      }
+   		}
+   	}
+}
+
+   console.log(tips.tip);
+  </script>
+</html>
